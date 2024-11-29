@@ -1,4 +1,4 @@
-@extends('layouts.default') <!-- Extends the layout -->
+@extends('layouts.auth') <!-- Extends the layout -->
 
 @section('title', 'Login Page') <!-- Sets the page title -->
 

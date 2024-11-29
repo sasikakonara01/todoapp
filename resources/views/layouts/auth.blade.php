@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="h-100">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -9,10 +9,9 @@
     @yield('style') <!-- Section for page-specific styles -->
 </head>
 
-<body class="d-flex flex-column h-100">
-    @include("include.header")
-    @yield("content") <!-- Section for page-specific content -->
-    @include("include.footer")
-    <script src="{{ asset('/assets/js/bootstrap.min.js') }}"></script>
+<body class="d-flex align-items-center py-4 bg-body-tertiary">
+    @yield('content') <!-- Section for page-specific content -->
+    <script src="{{ asset('/assets/js/bootstrap.bundle.min.js') }}"></script>
 </body>
+
 </html>
