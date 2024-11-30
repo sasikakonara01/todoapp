@@ -16,9 +16,10 @@ route::post("registerpost", [AuthManager::class, "registerpost"])
     ->name("register.post");
 
 route::middleware("auth")->group(function () {
-    Route::get('/', function () {
-        return view('welcome');
-    })->name('home');
+    Route::get('/', [TaskManager::class, "listTask"])->name('home');
+
+    // route::get("tasks/list",[TaskManager::class,"listTask"])
+    // ->name("task.list");
 
     route::get("tasks/add", [TaskManager::class, "add"])
         ->name("task.add");

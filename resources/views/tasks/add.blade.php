@@ -4,7 +4,8 @@
 
 <div class="d-flex justify-content-center">
     <div  class="container card shadow-sm" style="max-width: 500px ; margin-top: 100px;">
-        <form class="p-3" method="POST" action="" >
+        <form class="p-3" method="POST" action="{{ route('task.add.post') }}" >
+            @csrf
             <div>
                 <div class="fs-4 fw-bold mb-3 d-flex justify-content-center">Add new Task</div>
                 <input type="text" class="form-control" name="title" placeholder="Please Enter Task Name">
@@ -18,7 +19,8 @@
                
                 <textarea class="form-control mt-3"rows="3" name="description" placeholder="Description"></textarea>
               </div>
-              <a type="submit" class="btn btn-success" >Submit</a>
+            
+              <button type="submit" class="btn btn-success" >Submit</button>
         </form>
     
     </div>
